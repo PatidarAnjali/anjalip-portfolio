@@ -1,0 +1,17 @@
+[
+    {
+      "_id": "66c225b8a79700622ef8912a",
+      "title": "The Dino Game",
+      "description": "2D game I created in Java using Swing and AWT. I also added key gameplay features and enhanced user experience.",
+      "technologies": "Java",
+      "link": "https://github.com/PatidarAnjali/Dino-Game"
+    },
+    {
+      "_id": "66c2467506a82d30a9ed57df",
+      "title": "Animal Paintings",
+      "description": "Very cool artwork featuring different animals created using various techniques.",
+      "technologies": "Angular, Typescript, JS, HTML, CSS",
+      "link": "https://github.com/PatidarAnjali/animal-paintings"
+    }
+  ]
+  

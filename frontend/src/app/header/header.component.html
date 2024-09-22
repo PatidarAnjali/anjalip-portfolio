@@ -1,0 +1,46 @@
+<!-- header.component.html -->
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=EB+Garamond:wght@500&family=Manrope:wght@200..800&family=Maven+Pro:wght@600&family=Outfit:wght@900&family=PT+Serif&display=swap" rel="stylesheet">
+</head>
+
+<!-- header.component.html -->
+<div style="display: flex; flex-direction: column; height: 21vh;">
+  <!-- Toolbar -->
+  <mat-toolbar class="custom-toolbar">
+    <mat-toolbar-row>
+      <!-- Mobile Menu Button -->
+      <button mat-icon-button (click)="sidenav.toggle()" class="show-on-mobile">
+        <mat-icon>{{ sidenav.opened ? 'close' : 'menu' }}</mat-icon>
+      </button>
+
+      <!-- Logo and Title -->
+      <a href="">
+        <img src="assets/logo.png" alt="Logo" class="logo" />
+      </a>
+      <span class="nav-title">Anjali's Portfolio</span>
+
+      <span class="menu-spacer"></span>
+
+      <!-- Desktop Menu Items -->
+      <div class="show-on-desktop">
+        <a href="about" mat-button class="custom-menu-item">About</a>
+        <a href="projects" mat-button class="custom-menu-item">Projects</a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <!-- Sidenav and Content -->
+  <div class="container">
+    <mat-sidenav-container>
+      <mat-sidenav #sidenav mode="side" class="custom-sidenav">
+        <mat-nav-list>
+          <a href="about" mat-list-item class="custom-menu-item">About</a>
+          <a href="projects" mat-list-item class="custom-menu-item">Projects</a>
+        </mat-nav-list>
+      </mat-sidenav>
+    </mat-sidenav-container>
+  </div>
+
+</div>
