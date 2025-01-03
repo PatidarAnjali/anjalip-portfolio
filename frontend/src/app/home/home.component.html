@@ -1,16 +1,16 @@
 <app-header />
 
 <div class="intro">
-    <h1>Hi, I am Anjali!</h1>
-    <p style="color: #3abc4c; font-weight: bold;">Your favourite future Software Engineer</p><br>
-    <p>
-        Feel free to explore my portfolio to see some of my projects<br>
-        I've been working on. Connect with me if you'd like to collaborate<br>
-        or chat about technology and software engineering!
-    </p>
-    <a href="https://drive.google.com/file/d/1yi3MsyFcrPfVnTSYOpMlHI3zAuRHIO52/preview" target="_blank">
-        <button>Resume</button>
-    </a>
+  <h1>Hi, I am Anjali!</h1>
+  <p style="color: #2f4f2f;">Your favourite future Software Engineer</p><br>
+  <p>
+    Feel free to explore my portfolio to see some of my projects<br>
+    I've been working on. Connect with me if you'd like to collaborate<br>
+    or chat about technology and software engineering!
+  </p>
+  <a href="https://drive.google.com/file/d/1ZYMcb1ElDiL_IgDz2lA6zskZdAXrBaDR/view" target="_blank">
+    <button>Resume</button>
+  </a>
 </div>
 
 <div id="about" class="about-section">
@@ -28,7 +28,7 @@
       <div class="hobby-item guitar">
           <img src="/assets/guitar.jpg" alt="Playing Guitar">
           <div class="hover-description">
-              Playing the guitar is one of my favorite hobbies 🎸
+            Strumming my way through life—sometimes I hit the right chords, sometimes I just hit my fingers.
           </div>
       </div>
       
@@ -36,7 +36,7 @@
       <div class="hobby-item painting">
           <img src="/assets/painting.jpg" alt="Painting">
           <div class="hover-description">
-              I love expressing creativity through painting 🎨
+            I'm not saying I'm a great painter, but even my mistakes look like abstract art.
           </div>
       </div>
       
@@ -44,13 +44,13 @@
       <div class="hobby-item reading">
           <img src="/assets/reading.jpg" alt="Reading">
           <div class="hover-description">
-              Books are my escape from reality 📚
+            I once finished an entire book in a day... which is impressive until you realize I didn't do anything else all day.
           </div>
       </div>
   </div>
 </div>
 
-
+<!-- Projects Section -->
 <div id="projects" class="projects-section">
   <h1>Projects</h1>
   <p>
@@ -77,5 +77,10 @@
     </mat-card>
   </div>
 </div>
+
+<!-- Conditionally Rendered Back to Top Button -->
+<button *ngIf="showBackToTop" class="back-to-top-btn" (click)="scrollToTop()">
+  ↑
+</button>
 
 <app-footer />
