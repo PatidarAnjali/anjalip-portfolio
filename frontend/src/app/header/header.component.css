@@ -11,37 +11,6 @@
     border-bottom: 1px solid #e0e0e0;
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-body.dark-mode .custom-toolbar {
-    background-color: #333;
-    border-bottom: 1px solid #444;
-}
-
-body.dark-mode .custom-menu-item {
-    color: #bbb;
-}
-
-body.dark-mode .custom-menu-item:hover {
-    background-color: #444;
-}
-
-body.dark-mode .mat-sidenav-container {
-    background-color: #222;
-}
-
-body.dark-mode .logo {
-    filter: brightness(0) invert(1);
-}
-
-body.dark-mode .custom-toolbar mat-slide-toggle {
-    color: white;
-}
-
 .mat-sidenav-container {
     flex: 1;
     background-color: white;
