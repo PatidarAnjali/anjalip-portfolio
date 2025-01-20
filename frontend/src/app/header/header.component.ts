@@ -1,23 +1,26 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';  // Importing the slide-toggle module
+// import { RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterOutlet, MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule],
+  imports: [FormsModule, MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule, MatSlideToggleModule], // Add the MatSlideToggleModule here
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
   title = 'anjali-portfolio';
   isHandset: boolean = false;
+  isDarkMode: boolean = false;  // Track dark mode state
 
   @ViewChild('sidenav') sidenav!: MatSidenav;
 
@@ -31,7 +34,13 @@ export class HeaderComponent implements OnInit {
           this.closeSidenav();
         }
       });
-  }
+  
+    // Check the saved theme preference in localStorage
+    if (localStorage.getItem("dark-mode") === "enabled") {
+      this.isDarkMode = true;
+      document.body.classList.add("dark-mode");
+    }
+  }  
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
@@ -45,4 +54,14 @@ export class HeaderComponent implements OnInit {
       this.sidenav.close();
     }
   }
+
+  toggleDarkMode() {
+    if (this.isDarkMode) {
+      document.body.classList.add("dark-mode");
+      localStorage.setItem("dark-mode", "enabled");
+    } else {
+      document.body.classList.remove("dark-mode");
+      localStorage.setItem("dark-mode", "disabled");
+    }
+  }  
 }

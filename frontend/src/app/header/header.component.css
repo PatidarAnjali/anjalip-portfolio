@@ -1,15 +1,45 @@
 /* Primary Toolbar Styling */
-
 .custom-toolbar {
-    position: fixed; /* Makes it stick at the top of the viewport */
-    top: 0; /* Ensures it stays at the very top */
-    z-index: 1000; /* Ensures it stays above other elements */
-    background-color: #EEEEEE; /* Existing background */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: #EEEEEE;
     font-family: "Manrope", sans-serif;
     font-weight: 550;
     padding-left: 100px;
     padding-right: 100px;
-    border-bottom: 1px solid #e0e0e0; /* Subtle border for separation */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode .custom-toolbar {
+    background-color: #333;
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode .custom-menu-item {
+    color: #bbb;
+}
+
+body.dark-mode .custom-menu-item:hover {
+    background-color: #444;
+}
+
+body.dark-mode .mat-sidenav-container {
+    background-color: #222;
+}
+
+body.dark-mode .logo {
+    filter: brightness(0) invert(1);
+}
+
+body.dark-mode .custom-toolbar mat-slide-toggle {
+    color: white;
 }
 
 .mat-sidenav-container {

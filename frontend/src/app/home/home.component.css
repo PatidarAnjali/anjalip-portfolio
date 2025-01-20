@@ -126,12 +126,89 @@ p {
   transform: rotate(-5deg);
 }
 
+/* About and Skills Sections Layout */
+.about-skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.about-section, .skills-section {
+  background-color: #f5f5f5;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(224, 220, 220, 0.1);
+  width: 48%; /* Adjust width to fit side by side */
+}
+
+/* Adjust About Me section to be larger */
+.about-section {
+  flex: 2; /* Make it larger */
+}
+
+.skills-section {
+  flex: 0.8; /* Make it smaller */
+}
+
+.hobbies {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 55px;
+}
+
+/* Ensure About Me and Skills have appropriate title sizes */
+.about-section h1, .skills-section h1 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+/* Skills Section */
+.skills-section {
+  background-color: #f5f5f5;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(224, 220, 220, 0.1);
+  width: 48%;
+  text-align: center;
+  max-height: 300px; /* Adjust the maximum height as needed */
+  overflow: hidden; /* Prevent content from spilling over */
+  position: relative;
+}
+
+/* Skills List */
+.skills-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 1.2em;
+  max-height: 400px; 
+  overflow-y: auto; 
+}
+
+/* Skills List Items */
+.skills-section li {
+  margin: 10px 0;
+  text-align: left;
+  font-size: 0.9em;
+}
+
 /* Projects Section */
 .projects-section {
   text-align: center;
-  padding: 12vh 10vh;
-  background-color: #f1f1f1; /* Soft beige background */
-  color: #4a4a4a; /* Dark grayish-brown text for contrast */
+  padding: 30px;
+  background-color: #f5f5f5; /* Soft gray background */
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(224, 220, 220, 0.1);
+  margin-top: 50px;
+  width: 100%; /* Ensures the section takes up full width */
+  max-width: 1360px; /* Optionally limit the width for larger screens */
+  margin-left: auto; /* Center it horizontally */
+  margin-right: auto; /* Center it horizontally */
+  margin-bottom: 50px;
 }
 
 .projects-container {
@@ -158,13 +235,13 @@ p {
   margin-top: 20px;
 }
 
-/* Add rotation to project cards on hover */
+/* Hover effect for Project Cards */
 .project-card:hover {
   transform: translateY(-10px) rotate(var(--rotation));
-  box-shadow: 0 8px 25px rgba(119, 119, 119, 0.1); /* Slightly deeper hover shadow */
+  box-shadow: 0 8px 25px rgba(119, 119, 119, 0.1);
 }
 
-/* Set different rotation directions for cards */
+/* Set rotation for odd/even cards */
 .project-card:nth-child(odd):hover {
   --rotation: 5deg;
 }
@@ -180,7 +257,6 @@ p {
 .project-card:nth-child(4n):hover {
   --rotation: -8deg;
 }
-
 
 .project-card mat-card-header {
   display: flex;
